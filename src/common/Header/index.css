@@ -1,0 +1,12 @@
+.header .title{
+    font-weight: 700;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+}
+.header .toolbar{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.header .search{
+    border: 1px solid #000;
+}

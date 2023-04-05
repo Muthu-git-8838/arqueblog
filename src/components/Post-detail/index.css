@@ -1,0 +1,68 @@
+.detail {}
+
+.detail .name {
+    font-size: 16px !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.detail .time {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.detail .title {
+    font-size: 29px;
+    font-weight: 700;
+
+}
+
+.detail .lorem {
+    font-size: 73px;
+    font-weight: 500;
+    line-height: 62px;
+    float: left;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    color: #ffa400;
+    pointer-events: none;
+    cursor: default;
+}
+
+.detail .lorems {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.detail .name {
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.detail .user-detail {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.dynamic-content-html img {
+    /* Set width of image to maximum width of Card, height will follow aspect ratio */
+    width: 100% !important;
+  }
+
+
+/* 
+.dynamic-content-html span {
+    color: #fff !important;
+  } */
+
+.detail-container{
+    min-height: calc(100vh - 230px) !important;
+}

@@ -1,0 +1,8 @@
+.posts {
+    overflow: scroll !important;
+    max-height: 700px !important;
+}
+
+.posts::-webkit-scrollbar {
+    display: none;
+}

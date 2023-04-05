@@ -1,0 +1,688 @@
+{
+	"info": {
+		"_postman_id": "edd49209-6805-4425-8833-8490885b25a7",
+		"name": "Buy-sell-v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23206475"
+	},
+	"item": [
+		{
+			"name": "localhost:4001/api/v1/auth/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"mohan\",\n    \"last_name\": \"selvam\",\n    \"email\": \"zilywopi3@decabg.eu\",\n    \"password\": \"Mohan@123\",\n    \"user_type\": \"company\",\n    \"terms_conditions\":true,\n    \"categories\": [\"shoes\"],\n    \"user_attachments\": [],\n    \"business\": {\n        \"license\": {\n            \"disclosed\": true,\n            \"number\": \"1234\",\n            \"attachment\": \"63078045d95d2e43f57a7fb9\"\n        },\n        \"business_type\": \"2\",\n        \"company_name\": \"xyz company\",\n        \"company_address\": \"xyz london\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/verify-email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4001/api/v1/auth/verify-email/d56e57929e5a183663aebad3b1fed8e7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"verify-email",
+						"d56e57929e5a183663aebad3b1fed8e7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"zilywopi1@decabg.eu\",\n    \"password\": \"Mohan@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/auth/forgot-password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"email\":\"zilywopi@decabg.eu\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/auth/forgot-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/localhost:3000/api/v1/auth/update-password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"newPassword\":\"Mohan@321\",\n    \"forgotPasswordToken\":\"e8956476eab17b1c484027df347d61f4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/auth/update-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"update-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/post/create-service",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESSTOKEN}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Stunicon M Running Shoes For Men (Grey)\",\n    \"description\": \"Color Grey Outer material Synthetic, Textile Model name Stunicon M Ideal for Men Occasion Sports Secondary color Grey Sole material Rubber Closure Lace-Ups\",\n    \"can_be_delivered\": true,\n    \"additional_details\": {\n        \"bid_amount\":100,\n        \"delivered_in\":7,\n        \"milestone\":\"milestone_1\",\n        \"milestone_amount\":100,\n        \"skills_required\":[\"java\",\"c++\"]\n    },\n    \"discount\": 0,\n    \"is_assuered\": false,\n    \"price\": 100,\n    \"original_price\": 100,\n    \"views_count\": 0,\n    \"attachments\": [\n        \"63078045d95d2e43f57a7fb9\"\n    ],\n    \"currency\": \"usd\",\n    \"category\":\"i.t_services\",\n    \"post_type\":\"service\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/post/create",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"post",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/post/create-product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESSTOKEN}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"NEW 7 M Running Shoes For Men (Grey)\",\n    \"description\": \"Color Grey Outer material Synthetic, Textile Model name Stunicon M Ideal for Men Occasion Sports Secondary color Grey Sole material Rubber Closure Lace-Ups\",\n    \"can_be_delivered\": true,\n    \"additional_details\": {\n        \"brand\": \"BETA\",\n        \"in_stock\": true,\n        \"net_quantity\":100,\n        \"original_id\": \"1234\",\n        \"country_of_origin\":\"US\"\n    },\n    \"discount\": 0,\n    \"is_assuered\": false,\n    \"price\": 100,\n    \"original_price\": 100,\n    \"views_count\": 0,\n    \"attachments\": [\n        \"63078045d95d2e43f57a7fb9\"\n    ],\n    \"currency\": \"usd\",\n    \"category\": \"shoes\",\n    \"post_type\": \"product\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/post/create",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"post",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/post/get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/api/v1/post/get",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"post",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/post/get/:post_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzBhNGI4ODEzNzkxNjRmODhmNzM4MzkiLCJpYXQiOjE2NjE2NDM2NDV9.vFAZOBCm9eOok68mehCA1kYHVQYDUdD0eO1DzPm81k8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/post/get/byid/630ab685c7889e481e37b733",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"post",
+						"get",
+						"byid",
+						"630ab685c7889e481e37b733"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/post//get/recommended/bypost/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzBhNGI4ODEzNzkxNjRmODhmNzM4MzkiLCJpYXQiOjE2NjE2MTkwOTZ9.6ATIZUEP5RMGe6QUZjtv5PW7KDYkWjMihmPjMiPldOs",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:4001/api/v1/post//get/recommended/bypost/?vote_average=3&vote_count=2&views_count=2&category=shoes&post_id=6309ac07fd5856cf1ca4f10d",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"post",
+						"",
+						"get",
+						"recommended",
+						"bypost",
+						""
+					],
+					"query": [
+						{
+							"key": "vote_average",
+							"value": "3"
+						},
+						{
+							"key": "vote_count",
+							"value": "2"
+						},
+						{
+							"key": "views_count",
+							"value": "2"
+						},
+						{
+							"key": "category",
+							"value": "shoes"
+						},
+						{
+							"key": "post_id",
+							"value": "6309ac07fd5856cf1ca4f10d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/post/get/recommended",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzBhNGI4ODEzNzkxNjRmODhmNzM4MzkiLCJpYXQiOjE2NjE2NDM2NDV9.vFAZOBCm9eOok68mehCA1kYHVQYDUdD0eO1DzPm81k8",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:4001/api/v1/post/get/recommended",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"post",
+						"get",
+						"recommended"
+					],
+					"query": [
+						{
+							"key": "views_count",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/post/get/recent",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzBhNGI4ODEzNzkxNjRmODhmNzM4MzkiLCJpYXQiOjE2NjE2NDM2NDV9.vFAZOBCm9eOok68mehCA1kYHVQYDUdD0eO1DzPm81k8",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:4001/api/v1/post/get/recent",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"post",
+						"get",
+						"recent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/post/getById Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA5MjkwYTAxNDdhMmY1ZDRiNGI5Y2EiLCJpYXQiOjE2NjE2MDY0Mzh9.BsON4NFBchuE0JOa-kMAjJ3J0OO8Uf3nuIa7_9dqqjY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/post/getById?vote_average=3&vote_count=2&views_count=2&category=shoes&_id=6309ac07fd5856cf1ca4f10d",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"post",
+						"getById"
+					],
+					"query": [
+						{
+							"key": "vote_average",
+							"value": "3"
+						},
+						{
+							"key": "vote_count",
+							"value": "2"
+						},
+						{
+							"key": "views_count",
+							"value": "2"
+						},
+						{
+							"key": "category",
+							"value": "shoes"
+						},
+						{
+							"key": "_id",
+							"value": "6309ac07fd5856cf1ca4f10d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/attachment/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uploaded_file",
+							"type": "file",
+							"src": "/home/kiotac/Documents/scram-411.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/attachment/",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"attachment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/api/v1/category",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/currency",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/api/v1/currency",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"currency"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/posttype",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/api/v1/posttype",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"posttype"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/review/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzA5MjkwYTAxNDdhMmY1ZDRiNGI5Y2EiLCJpYXQiOjE2NjE2MTkwMDl9.Dd4URoERaoZvne0JJzd20ZW_VATE9LHE1bLcWcC79a0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"starCount\":2,\n    \"review\":\"Awesome prosduct\",\n    \"post\":\"630a5142357bbf341fc10e01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/review/create",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"review",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/review/get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/api/v1/review/get/63078154d95d2e43f57a7fd7",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"review",
+						"get",
+						"63078154d95d2e43f57a7fd7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/user/follow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESSTOKEN}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"userId\":\"6309290a0147a2f5d4b4b9ca\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/user/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4001/api/v1/user/unfollow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESSTOKEN}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"userId\":\"6309290a0147a2f5d4b4b9ca\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/user/unfollow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"unfollow"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

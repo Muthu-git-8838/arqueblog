@@ -1,0 +1,21 @@
+.header .title{
+    font-weight: 700;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+}
+.header .toolbar{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.header .search{
+    border: 1px solid #e7e7e7;
+}
+.css-ue7s0r-MuiPaper-root {
+    background-color: #fff;
+    color: #000;
+}
+
+.menu-active{
+    text-decoration: none !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}

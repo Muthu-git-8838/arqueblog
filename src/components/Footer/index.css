@@ -1,0 +1,13 @@
+
+.footer .count{
+    content: '0' counter(count);
+    counter-increment: count;
+    font-weight: 700;
+    font-size: 19px;
+    margin: 0 15px 0 0;
+    opacity: .2;
+}
+.footer .detail{
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}

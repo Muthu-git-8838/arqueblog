@@ -1,0 +1,23 @@
+.trending {
+}
+
+.trending .title {
+    font-weight: 600;
+    font-size: 12px;
+
+}
+
+.trending .post-title {
+    font-weight: 600;
+}
+
+.trending .papers {
+    background: #0e3138;
+    color: #fff;
+}
+
+.trending .time {
+    font-weight: 600;
+    color: #008b8b;
+    font-size: 12px;
+}

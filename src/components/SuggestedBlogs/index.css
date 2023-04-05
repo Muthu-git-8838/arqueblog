@@ -1,0 +1,69 @@
+
+
+.artical .name {
+    font-size: 16px !important;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+}
+
+.artical .time {
+    color: rgba(117, 117, 117, 1);
+    font-size: 14px;
+    font-family: 'Urbanist', sans-serif;
+
+}
+
+.artical .user {
+    display: flex;
+    align-items: center;
+}
+
+.artical .title {
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.artical .paragraph {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.artical .post {
+    display: flex;
+    justify-content: center;
+}
+
+.artical .img-tag {
+    display: flex;
+    align-items: center;
+}
+
+.artical .icon-row {
+    display: flex;
+    justify-content: space-between;
+    color: #757575;
+}
+
+.artical .post-paper {
+    border: 1px solid #fbf8f8;
+}
+
+.artical .inputs {
+    background-color: #bdbdbd;
+    border-radius: 50px;
+    padding-left: 12px !important;
+    padding: 3px;
+
+}
+
+.artical .ask {
+    font-family: 'Poppins', sans-serif;
+    color: rgba(117, 117, 117, 1);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
