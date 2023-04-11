@@ -58,9 +58,6 @@ export default function Profile() {
   const loggedInUserId = useSelector((state) => state.user.profile?._id);
   const myBlogs = useSelector((state) => state.post.activePosts);
 
-  console.log(">>>>>>>>>>>siva", profile);
-  console.log(">>>>>>>>>>>siva1", myBlogs);
-
   const [locations, setLocations] = useState([]);
 
   useEffect(() => {
@@ -75,9 +72,7 @@ export default function Profile() {
     // dispatch(getPostTypes());
     dispatch(getRecommendedPosts());
   }, []);
-  console.log("data>>>>>>>>>>>>>>>>>>>>>>>>>>>>>sasdsf", profile);
 
-  // console.log(">>>>>>>>>>sivvv",dispatch(getProfile()));
   return (
     <Box sx={{ bgcolor: "background.primary" }} minHeight={"100vh"}>
       <Header />
@@ -131,8 +126,15 @@ export default function Profile() {
                           alignItems={"center"}
                           justifyContent={"center"}
                         >
-                          <Typography fontWeight={'bold'} textTransform={'uppercase'}>{profile.first_name} {profile.last_name}</Typography>
+                          <Typography
+                            fontWeight={"bold"}
+                            textTransform={"uppercase"}
+                          >
+                            {profile.first_name} {profile.last_name}
+                          </Typography>
                           <Typography>{profile.email}</Typography>
+                          {/* <Typography>{profile.categories}</Typography> */}
+
                           {/* <Typography>india</Typography> */}
                         </Stack>
                       </Grid>

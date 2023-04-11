@@ -128,7 +128,6 @@ const getAllServices = async () => {
         method: 'POST',
         data: {}
     })
-    console.log("s-s-s>>>>>>>>>>>>>>>>>", response)
     if (response.success) {
         if (response.data && response.data.length > 0) {
             let locations = response.data.reduce((acc, cv) => {

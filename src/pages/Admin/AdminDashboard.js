@@ -83,7 +83,6 @@ export default function AdminDashboard() {
   useEffect(() => {
     getReports();
   }, []);
-  console.log("s--s>>>>>>>>>>>>>>frwtyeudwie>>", reports);
 
   return (
     <>

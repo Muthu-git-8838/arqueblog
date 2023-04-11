@@ -107,8 +107,6 @@ export default function Header({ hideControlls = false }) {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
 
-  console.log("Ss-s-ss>>>>>>>>>>>colorMode>>>>>>", colorMode);
-
   const navigate = useNavigate();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -391,7 +389,8 @@ export default function Header({ hideControlls = false }) {
                   }}
                   onClick={() => navigate("/")}
                 >
-                  A r <span className="arque">Q</span> u E
+                  <span className="arqu">A</span>r{" "}
+                  <span className="arque">Q</span>ue
                 </Typography>
               </Stack>
 

@@ -100,7 +100,6 @@ export default function SignUp({ setValue = () => {} }) {
   const [error, setError] = useState({ path: null });
   const [loading, setLoading] = useState(false);
   const categories = useSelector((state) => state.common.categories);
-  console.log("s--ss>>>>>categories>>>>>>>>>", categories);
   const dispatch = useDispatch();
 
   const [data, setData] = useState({
@@ -112,7 +111,6 @@ export default function SignUp({ setValue = () => {} }) {
     user_attachments: [],
     terms_conditions: false,
   });
-  console.log("s--ss>>dattatat>>>>>>>>>>>>", data);
   const navigate = useNavigate();
   const onRegister = async () => {
     let error = await Validate(customerSchema, data);
@@ -293,7 +291,6 @@ export default function SignUp({ setValue = () => {} }) {
                 <Select
                   className="category_list"
                   onChange={(e) => {
-                    console.log(e);
                     setData({
                       ...data,
                       categories: e.map((e) => e._id),
@@ -319,7 +316,6 @@ export default function SignUp({ setValue = () => {} }) {
               </Typography>
               <FileUpload
                 onChange={(files) => {
-                  console.log("Ss0s>>>>>>>>>>>", files);
                   setData({
                     ...data,
                     user_attachments: files,

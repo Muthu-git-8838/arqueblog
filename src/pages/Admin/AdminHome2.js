@@ -320,11 +320,7 @@ export default function Dashboard() {
     }
   };
 
-  console.log(
-    "s-s-s>>>>>>>>currentMenuTitle>>>>>.",
-    modalData,
-    currentMenuTitle
-  );
+  
 
   return (
     <>
@@ -464,10 +460,7 @@ export default function Dashboard() {
                                 : "False"
                             }
                             onChange={(e) => {
-                              console.log(
-                                "S-s-s>>>>>>eeeeeeeeeee>>>>>>>>>>>",
-                                e.target.value
-                              );
+                              
                               setModalData({
                                 ...modalData,
                                 row: {

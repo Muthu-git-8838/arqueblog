@@ -44,7 +44,6 @@ const Sidebar_subMenu = ({ item, onMenuClick = () => { } }) => {
   const [subnav, setSubnav] = useState(false);
   const { t } = useTranslation();
   const showSubnav = () => setSubnav(!subnav);
-  console.log('item--------', item)
   return (
     <>
     <Grid>

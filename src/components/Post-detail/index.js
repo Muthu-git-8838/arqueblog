@@ -110,7 +110,6 @@ const PostDetail = ({ post = null }) => {
   });
   
   const [posts, setPosts] = useState([]);
-  console.log("<<<<<<<<<<getpost>>>>>>>", posts);
   const onPost = async () => {
     let error = await Validate(postSchema, Info);
     setError(error);
@@ -123,7 +122,6 @@ const PostDetail = ({ post = null }) => {
       method: "POST",
       data: restData,
     });
-    console.log(">>>>>>>.siva", Info);
     setLoading(false);
     if (response.success) {
       setInfo({
@@ -146,7 +144,6 @@ const PostDetail = ({ post = null }) => {
       method: "GET",
       // data
     });
-    console.log("s--s>>>>rajesh123>>>>>>>>>", response);
     if (response.success) {
       setPosts(response.data);
     }
@@ -158,12 +155,10 @@ const PostDetail = ({ post = null }) => {
 
   const dispatch = useDispatch();
   const params = useParams();
-  console.log("s--s>>>>rajes>>>>>>>>>", params);
   const [reviewData, setReviewData] = useState({
     review: "",
     starCount: 1,
   });
-  console.log("s--s>>>>rajesh>>>>>>>>>", params);
   const addReview = () => {
     dispatch(
       createReview({
@@ -183,11 +178,8 @@ const PostDetail = ({ post = null }) => {
   };
 
   React.useEffect(() => {
-    console.log("trrrrrrrrr", Object.keys(Info).length === 0);
     if (quill) {
       quill.on("text-change", () => {
-        console.log("===..........", quill.getText());
-        console.log(quillRef.current.firstChild.innerHTML);
         setInfo({
           ...Info,
           description: quill.getText(),
@@ -333,7 +325,6 @@ const PostDetail = ({ post = null }) => {
                             </InputAdornment>
                           }
                           onKeyPress={(ev) => {
-                            console.log(`Pressed keyCode ${ev.key}`);
                             if (ev.key === "Enter") {
                               // Do code here
                               ev.preventDefault();

@@ -33,7 +33,6 @@ const Login = () => {
   const navigate = useNavigate();
 
   const login = async () => {
-    console.log("$$$$$$~~~~~~~~~>>>", data)
     setError({ path: null });
     let error = await Validate(schema, data);
     setError(error);

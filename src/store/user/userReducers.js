@@ -43,7 +43,6 @@ const loginSlice = createSlice({
       })
       .addCase(getProfile.fulfilled, (state, action) => {
         state.loading = false;
-        console.log("s--ss->>>action.payload>>>>>>>>>>", action.payload);
         if (action.payload.data) {
           state.profile = action.payload.data;
           state.isLoggedIn = true;

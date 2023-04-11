@@ -23,7 +23,6 @@ import UserAvatar from "../../common/UserAvatar";
 import AutoStoriesIcon from "@mui/icons-material/RemoveRedEyeSharp";
 
 export default function CardSM({ post }) {
-  console.log("S-s-s>>>posttt>>>>>>", post);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.user.profile.wishlist);

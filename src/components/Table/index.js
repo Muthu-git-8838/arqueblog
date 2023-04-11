@@ -118,7 +118,6 @@ export default function Tables({
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
-  console.log("S-s-s>>>>>columns>>>>>", columns);
 
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(+event.target.value);
@@ -136,7 +135,6 @@ export default function Tables({
     handleUpload(filesUploaded);
   };
   const Add = async () => {
-    console.log("$$$$$$~~~~~~~~~>>>", data);
     setError({ path: null });
     let error = await Validate(schema, data);
     setError(error);
@@ -167,7 +165,6 @@ export default function Tables({
       setUpdate(response.data.update || false);
     }
   };
-  console.log("~~~~~jkkkkkkkkkkkk", filterBy);
   useEffect(() => {
     get();
     setChecked([]);

@@ -97,7 +97,6 @@ export default function UpdatePassword() {
     setError({ path: null });
     let error = await Validate(schema, data);
     setError(error);
-    console.log("s-s-s>>>>>>>>>>>>>>", data, error);
     if (error) return;
     const { confirmPassword, ...restData } = data;
     setLoading(true);
@@ -118,7 +117,6 @@ export default function UpdatePassword() {
 
   useEffect(() => {
     if (params) {
-      //console.log("s-s-s>>>>>>>>>>>>>>>>>", params);
       setData({
         ...data,
         forgotPasswordToken: params.forgotPasswordToken,

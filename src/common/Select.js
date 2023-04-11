@@ -15,12 +15,9 @@ const parseValue = (value) => {
 };
 
 export default function BasicSelect(props) {
-  console.log("sss>>>>>>>>>>>>>pBasicSelectropss", props.values);
   const [value, setValue] = React.useState(null);
-  console.log("value", value);
   const handleChange = (event) => {
     setValue(parseValue(event.target.value));
-    console.log("event.target.value", event.target.value);
     props.onChange(event);
   };
 
@@ -43,7 +40,7 @@ export default function BasicSelect(props) {
 
   return (
     <>
-     {props.label && <Label {...props} />}
+      {props.label && <Label {...props} />}
       <FormControl fullWidth>
         <Select
           value={value}
@@ -61,12 +58,6 @@ export default function BasicSelect(props) {
           {props.values.map((v) => {
             const name = typeof v === "string" ? v : v.name || v.label;
             const id = typeof v === "string" ? v : v.id || v._id || v.key;
-            console.log(
-              "s--s>>>>>>valuesscurrentValuess>>>>>>>",
-              value,
-              id,
-              name
-            );
 
             return <MenuItem value={id}>{name}</MenuItem>;
           })}

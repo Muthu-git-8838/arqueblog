@@ -109,7 +109,6 @@ export default function ForgotPassword({ setForgotPassword }) {
     });
     setLoading(false);
 
-    console.log("s--s>>>>responsee>>>>>>>>>", response);
     if (response.success) {
       goToSignin();
     }

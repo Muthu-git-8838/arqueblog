@@ -9,7 +9,6 @@ export const getPostTypes = createAsyncThunk(
       method: "GET",
       data,
     }).then((response) => {
-      console.log("response",response);
 
       return response;
     });

@@ -68,8 +68,8 @@ const CategoriesCarousel = () => {
           responsive={responsive}
           style={{ bgcolor: "background.secondary" }}
         >
-          {categories.map((category) => (
-            <Stack p={2}>
+          {categories.map((category, index) => (
+            <Stack p={2} key={index}>
               <Stack
                 direction={"row"}
                 spacing={2}

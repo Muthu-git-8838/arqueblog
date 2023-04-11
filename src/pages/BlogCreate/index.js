@@ -60,7 +60,6 @@ function BlogCreate() {
   const categories = useSelector((state) => state.common.categories);
   const profile = useSelector((state) => state.user.profile);
   const postType = useSelector((state) => state.postType.postTypes);
-  console.log("posttype12", postType);
   const [show, setShow] = React.useState(true);
   const [shows, setShows] = React.useState(true);
   const [open, setOpen] = React.useState(false);
@@ -70,7 +69,6 @@ function BlogCreate() {
   const handleCloseblogmodel = () => setOpenblogmodel(false);
   const { quill, quillRef } = useQuill({ placeholder: "Write your story..." });
   const params = useParams();
-  console.log("s-s-s>>>>>>>>>pramrmr>>>", params);
   useEffect(() => {
     if (params.title) {
       dispatch(getPost({ post_id: params.title }));
@@ -84,7 +82,6 @@ function BlogCreate() {
     post_type: "",
   });
 
-  console.log("s--s>>>>respo>>>>>>>>>", data);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState({ path: null });
 
@@ -98,9 +95,7 @@ function BlogCreate() {
       method: "POST",
       data,
     });
-    console.log(">>>>>>>.siva", data);
     setLoading(false);
-    console.log("s--s>>>>responsee>>>>>>>>>", response);
     if (response.success) {
       setData({
         ...data,
@@ -124,9 +119,7 @@ function BlogCreate() {
       method: "POST",
       data: restData,
     });
-    console.log(">>>>>>>.siva", data);
     setLoading(false);
-    console.log("s--s>>>>responsee>>>>>>>>>", response);
     if (response.success) {
       setData({
         ...data,
@@ -139,7 +132,6 @@ function BlogCreate() {
   };
   const callDouble = (qus) => {
     setShow(false);
-    console.log("questionwssssssssssssssss", qus);
     setData({
       ...data,
       post_type: qus,
@@ -148,7 +140,6 @@ function BlogCreate() {
   };
   const callDouble1 = (blo) => {
     setShows(false);
-    console.log("questionwssssssssssssssss", blo);
     setData({
       ...data,
       post_type: blo,
@@ -156,11 +147,8 @@ function BlogCreate() {
     handleCloseblogmodel();
   };
   React.useEffect(() => {
-    console.log("trrrrrrrrr", Object.keys(data).length === 0);
     if (quill) {
       quill.on("text-change", () => {
-        console.log("===..........", quill.getText());
-        console.log(quillRef.current.firstChild.innerHTML);
         setData({
           ...data,
           description: quill.getText(),
@@ -170,7 +158,6 @@ function BlogCreate() {
     }
   }, [quill, data]);
 
-  console.log(data, "this is quill editor");
   return (
     <>
       <Modal

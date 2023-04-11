@@ -338,11 +338,7 @@ function ResponsiveDrawer(props) {
     }
   };
 
-  console.log(
-    "s-s-s>>>>>>>>currentMenuTitle>>>>>.",
-    modalData,
-    currentMenuTitle
-  );
+  
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -536,10 +532,7 @@ function ResponsiveDrawer(props) {
                           modalData.row[column.path] === true ? "True" : "False"
                         }
                         onChange={(e) => {
-                          console.log(
-                            "S-s-s>>>>>>eeeeeeeeeee>>>>>>>>>>>",
-                            e.target.value
-                          );
+                          
                           setModalData({
                             ...modalData,
                             row: {

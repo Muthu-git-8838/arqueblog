@@ -4,7 +4,6 @@ import React from "react";
 import BlogCard from "../BlogCard";
 
 const RecentPosts = ({ posts = [] }) => {
-  console.log("S-s-s/.............posts..", posts);
   return (
     posts.length > 0 && (
       <Box>

@@ -98,7 +98,6 @@ export const removeWishList = createAsyncThunk(
 //       method: "GET",
 //       skipError:true
 //     }).then((response) => {
-//       console.log("S-s-s>>>>>>>>>>>>>response>>", response);
 //       return response;
 //     });
 //     return res;

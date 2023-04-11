@@ -76,14 +76,12 @@ const ImagePreview = memo(
           }
         },
       });
-      console.log("s--s>>>>responsee>>>>>>>>>", response);
       if (response.success) {
         updateUploaded(response.data);
         setAttachmentId(response.data.attachment_id);
         setUploaded(true);
       }
     };
-    console.log("s--s>>>>responsee>>>>selectedFile>>>>>", selectedFile);
 
     return (
       <Grid item xs={3} style={{ position: "relative" }}>
@@ -169,8 +167,6 @@ const FileUpload = ({
         multiple
       );
   }, [uploadedFiles]);
-  console.log("s--s>>>>uploadedFiles>>>>>>>>>", uploadedFls);
-  console.log("s--s>>>>selectedFielss>>>>>>>>>", selectedFiles);
 
   return (
     <Grid container>
@@ -194,7 +190,6 @@ const FileUpload = ({
                     setSelectedFiles(selected);
                   }}
                   updateUploaded={(file) => {
-                    console.log("s-s-s>>>>>>>>filefile>>>>>>>>>>", file);
                     let tmp = [...uploadedFiles];
                     tmp.push(file);
                     uploadedFls.current.push(file);

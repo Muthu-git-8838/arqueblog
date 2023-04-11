@@ -13,6 +13,9 @@
   display: inline-block;
   font-size: 25px;
 }
+.arqu {
+  color: purple;
+}
 @keyframes anime {
   0% {
     transform: rotate(0deg);

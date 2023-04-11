@@ -8,7 +8,6 @@ export const getRecommendedPosts = createAsyncThunk(
       url: "/post/get/recommended",
       method: "GET",
     }).then((response) => {
-      console.log("S-s-s>>>>>>>>>>>>>response>>", response);
       return response;
     });
     return res;
@@ -23,7 +22,6 @@ export const getMyFollowings = createAsyncThunk(
       method: "GET",
       skipError: true,
     }).then((response) => {
-      console.log("S-s-s>>>>>>>>>>>>>response>>", response);
       return response;
     });
     return res;
@@ -76,7 +74,6 @@ export const getPost = createAsyncThunk(
 export const getMyActivePosts = createAsyncThunk(
   "posts/get/my-active-posts/",
   async ({ userId }, { dispatch }) => {
-    console.log("s--s>>>>>>>>>>>>>>userIduserId>>",userId)
     const res = await apiRequest({
       url: "/post/get/my-posts?userId=" +userId+ "&status=active",
       method: "GET",
@@ -102,7 +99,6 @@ export const getMyExpiredPosts = createAsyncThunk(
 
 export const getPostDetail = createAsyncThunk(
   async ({ postId }, { dispatch }) => {
-    console.log(">>>>>>>.rajesh12345", postId);
     
     const res = await apiRequest({
       url: `post/get/byid/${postId}`,

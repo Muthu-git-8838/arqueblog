@@ -15,7 +15,6 @@ const Detail = () => {
     (state) => state.post.currentViewedPost.post
   );
   const params = useParams();
-  console.log("s-s-s>>>>>>>>>pramrmr>>>", params);
   useEffect(() => {
     if (params.postId) {
       dispatch(getPost({ post_id: params.postId }));

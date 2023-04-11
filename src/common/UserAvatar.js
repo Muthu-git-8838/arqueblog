@@ -20,7 +20,6 @@ function UserAvatar({
   if (!text && !src) {
     return null;
   }
-  console.log("s-s-s>>>>>>>>>>>>srccc>>", FILE_SERVER + src, text);
   return src ? (
     <Avatar
       onClick={() => {
